@@ -102,6 +102,7 @@
     
 // Number.isSafeInteger()
 // method returns true if the argument is a safe integer
+// a safe integer is an integer that can be exactly represented as a double precision number
 
     Number.isSafeInteger(7); // return true
     Number.isSafeInteger(12345678901234567890); // returns false
@@ -111,3 +112,39 @@
 // NEW GLOBAL METHODS
 // =============================================================================================================================
 
+// isFinite()
+// method returns false if the argument is Infinity or NaN
+
+    isFinite(10/0); // returns false
+    isFinite(10 / 1); // returns true
+    
+// isNaN()
+// method returns true if the argument is NaN. Otherwise it returns false
+
+    isNaN("Hello World"); // returns true
+    isNaN(5); // returns false
+    
+
+// =============================================================================================================================
+// ARROW FUNCTIONS  
+// =============================================================================================================================
+
+// short syntax for writing function expressions
+// don't need the function keyword, the return keyword, and the curly brackets
+
+    // ES5
+    var x = function (x, y) {
+        return x * y;
+    };
+
+    // ES6
+    const x = (x, y) => x * y;
+    
+    // more readable ES6?
+    const x = (x, y) => { return x * y };
+    
+// Arrow functions do not have their own this
+// They are not well suited for defining object methods
+
+// Arrow functions must be defined before they are used
+// Using const is safer than using var, because a function expression is a constant value
