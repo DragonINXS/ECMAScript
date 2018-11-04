@@ -14,7 +14,7 @@
     // Here x is 10 
 
 
-// const 
+// const
 // statement allows you to declare a constant
 // Constants are similar to let variables, except that the value cannot be changed
 
